@@ -1,0 +1,23 @@
+﻿@model IntroductionToAspMVC.ViewModels.UserViewModel
+
+<h1>
+    About the authors
+</h1>
+
+@{
+    foreach (User user in Model.Users)
+    {
+        <p>Hello, I am @user.Name @user.LastName</p>
+        <p>My date of birth is @user.DateOfBirth</p>
+
+        <h2><i>Skills</i></h2>
+        <ul>
+            @{
+                foreach (var skill in user.Skills)
+                {
+                    <li>@skill</li>
+                }
+            }
+        </ul>
+    }
+}

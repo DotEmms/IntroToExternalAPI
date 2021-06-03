@@ -1,0 +1,28 @@
+﻿@model MovieDetailViewModel
+
+<table>
+    <tr>
+        <td>Title:</td>
+        <td>@Model.Title</td>
+    </tr>
+    <tr>
+        <td>Year of release:</td>
+        <td>
+            @{
+                if (Model.ReleaseDate.Value > DateTime.Today)
+                {
+                    var days = (Model.ReleaseDate.Value - DateTime.Today).Days;
+                    <p>Still @days days to go!</p>
+                }
+                else
+                {
+                    @Model.ReleaseDate.Value.Year;
+                    }
+                }
+        </td>
+    </tr>
+    <tr>
+        <td>Rating:</td>
+        <td>@Model.Rating</td>
+    </tr>
+</table>
