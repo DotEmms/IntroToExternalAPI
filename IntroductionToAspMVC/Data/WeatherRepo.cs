@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace IntroductionToAspMVC.Data
 {
-    public class WeatherRepo
+    public class WeatherRepo : IWeatherRepo
     {
         private const string apiId = "bc3ab5e266400e234d1f8b352e188cce";
         private const string apiUrl = "http://api.openweathermap.org/data/2.5";

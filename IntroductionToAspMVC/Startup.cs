@@ -27,6 +27,7 @@ namespace IntroductionToAspMVC
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IMovieService, MovieService>();
             services.AddScoped<IGenericRepo<Movie>, GenericRepo<Movie>>();
+            services.AddScoped<IWeatherRepo, WeatherRepo>();
 
             services.AddAutoMapper(typeof(AutoMapperProfile).Assembly);
             services.AddDbContext<AspContext>(options =>
